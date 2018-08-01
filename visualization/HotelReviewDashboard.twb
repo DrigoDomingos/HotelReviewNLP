@@ -14,37 +14,56 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='7282_1 - Copy' name='textscan.1vdhqo113kggp51f1kukl0che3pd'>
-            <connection class='textscan' directory='C:/Users/Rodrigo/Desktop/projetos/HotelReview/HotelReviewNLP/data' filename='7282_1 - Copy.csv' password='' server='' />
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/Rodrigo/Desktop/projetos/HotelReview/HotelReviewNLP/data/HotelReview.csv' dataRefreshTime='' directory='C:/Users/Rodrigo/Desktop/projetos/HotelReview/HotelReviewNLP/data' filename='C:/Users/Rodrigo/AppData/Local/Temp/TableauTemp/1lcffd5158p9b411wobrk0jdbagq/HotelReview.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
-        <relation connection='textscan.1vdhqo113kggp51f1kukl0che3pd' name='7282_1 - Copy.csv' table='[7282_1 - Copy#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator=','>
-            <column datatype='string' name='address' ordinal='0' />
-            <column datatype='string' name='categories' ordinal='1' />
-            <column datatype='string' name='city' ordinal='2' />
-            <column datatype='string' name='country' ordinal='3' />
-            <column datatype='string' name='latitude' ordinal='4' />
-            <column datatype='string' name='longitude' ordinal='5' />
-            <column datatype='string' name='name' ordinal='6' />
-            <column datatype='integer' name='postalCode' ordinal='7' />
-            <column datatype='string' name='province' ordinal='8' />
-            <column datatype='datetime' name='reviews.date' ordinal='9' />
-            <column datatype='datetime' name='reviews.dateAdded' ordinal='10' />
-            <column datatype='string' name='reviews.doRecommend' ordinal='11' />
-            <column datatype='string' name='reviews.id' ordinal='12' />
-            <column datatype='integer' name='reviews.rating' ordinal='13' />
-            <column datatype='string' name='reviews.text' ordinal='14' />
-            <column datatype='string' name='reviews.title' ordinal='15' />
-            <column datatype='string' name='reviews.userCity' ordinal='16' />
-            <column datatype='string' name='reviews.username' ordinal='17' />
-            <column datatype='string' name='reviews.userProvince' ordinal='18' />
+        <relation connection='textscan.1vdhqo113kggp51f1kukl0che3pd' name='HotelReview.csv' table='[HotelReview#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='pt_BR' separator='.'>
+            <column datatype='string' name='address,categories,city,country,latitude,longitude,name,postalCode,province,reviews' ordinal='0' />
+            <column datatype='string' name='date,reviews' ordinal='1' />
+            <column datatype='string' name='dateAdded,reviews' ordinal='2' />
+            <column datatype='string' name='doRecommend,reviews' ordinal='3' />
+            <column datatype='string' name='id,reviews' ordinal='4' />
+            <column datatype='string' name='rating,reviews' ordinal='5' />
+            <column datatype='string' name='text,reviews' ordinal='6' />
+            <column datatype='string' name='title,reviews' ordinal='7' />
+            <column datatype='string' name='userCity,reviews' ordinal='8' />
+            <column datatype='string' name='username,reviews' ordinal='9' />
+            <column datatype='string' name='userProvince,sentiment_polarity,sentiment_subjectivity,fix,clean' ordinal='10' />
+            <column datatype='string' name='F12' ordinal='11' />
+            <column datatype='string' name='F13' ordinal='12' />
+            <column datatype='string' name='F14' ordinal='13' />
+            <column datatype='real' name='F15' ordinal='14' />
+            <column datatype='real' name='F16' ordinal='15' />
+            <column datatype='real' name='F17' ordinal='16' />
+            <column datatype='real' name='F18' ordinal='17' />
+            <column datatype='real' name='F19' ordinal='18' />
+            <column datatype='real' name='F20' ordinal='19' />
+            <column datatype='real' name='F21' ordinal='20' />
+            <column datatype='real' name='F22' ordinal='21' />
+            <column datatype='real' name='F23' ordinal='22' />
+            <column datatype='real' name='F24' ordinal='23' />
+            <column datatype='real' name='F25' ordinal='24' />
+            <column datatype='real' name='F26' ordinal='25' />
+            <column datatype='real' name='F27' ordinal='26' />
+            <column datatype='real' name='F28' ordinal='27' />
+            <column datatype='real' name='F29' ordinal='28' />
+            <column datatype='real' name='F30' ordinal='29' />
+            <column datatype='real' name='F31' ordinal='30' />
+            <column datatype='real' name='F32' ordinal='31' />
+            <column datatype='integer' name='F33' ordinal='32' />
+            <column datatype='string' name='F34' ordinal='33' />
+            <column datatype='real' name='F35' ordinal='34' />
+            <column datatype='real' name='F36' ordinal='35' />
+            <column datatype='real' name='F37' ordinal='36' />
+            <column datatype='integer' name='F38' ordinal='37' />
           </columns>
         </relation>
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
             <remote-type>0</remote-type>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
+            <parent-name>[HotelReview.csv]</parent-name>
             <remote-alias />
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -53,19 +72,20 @@
               <attribute datatype='string' name='collation'>&quot;pt_BR&quot;</attribute>
               <attribute datatype='string' name='currency'>&quot;R$&quot;</attribute>
               <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;.&quot;</attribute>
               <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
               <attribute datatype='string' name='locale'>&quot;pt_BR&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
               <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
               <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
             </attributes>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>address</remote-name>
+            <remote-name>address,categories,city,country,latitude,longitude,name,postalCode,province,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[address]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>address</remote-alias>
+            <local-name>[address,categories,city,country,latitude,longitude,name,postalCode,province,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>address,categories,city,country,latitude,longitude,name,postalCode,province,reviews</remote-alias>
             <ordinal>0</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -75,11 +95,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>categories</remote-name>
+            <remote-name>date,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[categories]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>categories</remote-alias>
+            <local-name>[date,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>date,reviews</remote-alias>
             <ordinal>1</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -89,11 +109,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>city</remote-name>
+            <remote-name>dateAdded,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[city]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>city</remote-alias>
+            <local-name>[dateAdded,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>dateAdded,reviews</remote-alias>
             <ordinal>2</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -103,11 +123,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>country</remote-name>
+            <remote-name>doRecommend,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[country]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>country</remote-alias>
+            <local-name>[doRecommend,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>doRecommend,reviews</remote-alias>
             <ordinal>3</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -117,11 +137,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>latitude</remote-name>
+            <remote-name>id,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[latitude]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>latitude</remote-alias>
+            <local-name>[id,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>id,reviews</remote-alias>
             <ordinal>4</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -131,11 +151,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>longitude</remote-name>
+            <remote-name>rating,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[longitude]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>longitude</remote-alias>
+            <local-name>[rating,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>rating,reviews</remote-alias>
             <ordinal>5</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -145,11 +165,11 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>name</remote-name>
+            <remote-name>text,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[name]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>name</remote-alias>
+            <local-name>[text,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>text,reviews</remote-alias>
             <ordinal>6</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -159,22 +179,25 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>postalCode</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[postalCode]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>postalCode</remote-alias>
+            <remote-name>title,reviews</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>title,reviews</remote-alias>
             <ordinal>7</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>province</remote-name>
+            <remote-name>userCity,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[province]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>province</remote-alias>
+            <local-name>[userCity,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>userCity,reviews</remote-alias>
             <ordinal>8</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -184,75 +207,291 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.date</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[reviews.date]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.date</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>reviews.dateAdded</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[reviews.dateAdded]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.dateAdded</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>reviews.doRecommend</remote-name>
+            <remote-name>username,reviews</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[reviews.doRecommend]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.doRecommend</remote-alias>
+            <local-name>[username,reviews]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>username,reviews</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>userProvince,sentiment_polarity,sentiment_subjectivity,fix,clean</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[userProvince,sentiment_polarity,sentiment_subjectivity,fix,clean]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>userProvince,sentiment_polarity,sentiment_subjectivity,fix,clean</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F12</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F12]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F12</remote-alias>
             <ordinal>11</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
-            <approx-count>1</approx-count>
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.id</remote-name>
+            <remote-name>F13</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[reviews.id]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.id</remote-alias>
+            <local-name>[F13]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F13</remote-alias>
             <ordinal>12</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
-            <approx-count>1</approx-count>
             <scale>1</scale>
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.rating</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[reviews.rating]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.rating</remote-alias>
+            <remote-name>F14</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F14]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F14</remote-alias>
             <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LPT_RBR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F15</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F15]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F15</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F16</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F16]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F16</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F17</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F17]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F17</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F18</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F18]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F18</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F19</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F19]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F19</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F20</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F20]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F20</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F21</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F21]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F21</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F22</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F22]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F22</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F23</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F23]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F23</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F24</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F24]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F24</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F25</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F25]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F25</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F26</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F26]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F26</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F27</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F27]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F27</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F28</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F28]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F28</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F29</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F29]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F29</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F30</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F30]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F30</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F31</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F31]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F31</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F32</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F32]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F32</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F33</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F33]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F33</remote-alias>
+            <ordinal>32</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.text</remote-name>
+            <remote-name>F34</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[reviews.text]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.text</remote-alias>
-            <ordinal>14</ordinal>
+            <local-name>[F34]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F34</remote-alias>
+            <ordinal>33</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <scale>1</scale>
@@ -261,60 +500,48 @@
             <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.title</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[reviews.title]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.title</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
+            <remote-name>F35</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F35]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F35</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.userCity</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[reviews.userCity]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.userCity</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
+            <remote-name>F36</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F36]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F36</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.username</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[reviews.username]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.username</remote-alias>
-            <ordinal>17</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
+            <remote-name>F37</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[F37]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F37</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>reviews.userProvince</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[reviews.userProvince]</local-name>
-            <parent-name>[7282_1 - Copy.csv]</parent-name>
-            <remote-alias>reviews.userProvince</remote-alias>
-            <ordinal>18</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
+            <remote-name>F38</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F38]</local-name>
+            <parent-name>[HotelReview.csv]</parent-name>
+            <remote-alias>F38</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='0' name='LPT_RBR' />
           </metadata-record>
         </metadata-records>
       </connection>
@@ -322,21 +549,24 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <column datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-      <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
-      <column datatype='integer' default-format='*00000' name='[postalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
-      <column datatype='string' name='[province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[address,categories,city,country,latitude,longitude,name,postalCode,province,reviews]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Date,Reviews' datatype='string' name='[date,reviews]' role='dimension' type='nominal' />
+      <column caption='Id,Reviews' datatype='string' name='[id,reviews]' role='dimension' type='nominal' />
+      <column caption='Rating,Reviews' datatype='string' name='[rating,reviews]' role='dimension' type='nominal' />
       <column datatype='integer' name='[reviews.rating (compartimento)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='0' formula='[reviews.rating]' peg='0' size='1.58' />
       </column>
       <column datatype='integer' name='[reviews.rating]' role='measure' type='quantitative' />
-      <column datatype='string' name='[reviews.userProvince]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Text,Reviews' datatype='string' name='[text,reviews]' role='dimension' type='nominal' />
+      <column caption='Title,Reviews' datatype='string' name='[title,reviews]' role='dimension' type='nominal' />
+      <column caption='userProvince,sentiment polarity,sentiment subjectivity,fix,clean' datatype='string' name='[userProvince,sentiment_polarity,sentiment_subjectivity,fix,clean]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Username,Reviews' datatype='string' name='[username,reviews]' role='dimension' type='nominal' />
       <column-instance column='[reviews.rating]' derivation='Avg' name='[avg:reviews.rating:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
       <drill-paths>
         <drill-path name='userProvince, address,categories,city,country,latitude,longitude,name,postalCode,province,reviews' />
       </drill-paths>
-      <layout dim-ordering='alphabetic' dim-percentage='0.769231' measure-ordering='alphabetic' measure-percentage='0.230769' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.75' measure-ordering='alphabetic' measure-percentage='0.25' show-structure='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -708,7 +938,7 @@
     </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' name='InformedReviewRating'>
+    <window class='worksheet' maximized='true' name='InformedReviewRating'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -726,11 +956,6 @@
           </strip>
           <strip size='2147483647'>
             <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='169'>
-            <card pane-specification-id='0' param='[federated.13dvu5d1td7pwf1bguwah0y97skf].[avg:reviews.rating:qk]' type='color' />
           </strip>
         </edge>
       </cards>
@@ -855,7 +1080,7 @@
         </edge>
       </cards>
     </window>
-    <window class='worksheet' maximized='true' name='Sazionality'>
+    <window class='worksheet' name='Sazionality'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -877,7 +1102,7 @@
           </strip>
         </edge>
         <edge name='right'>
-          <strip size='169'>
+          <strip size='168'>
             <card pane-specification-id='0' param='[federated.13dvu5d1td7pwf1bguwah0y97skf].[:Measure Names]' type='color' />
           </strip>
         </edge>
